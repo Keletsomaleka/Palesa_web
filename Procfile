@@ -1,0 +1,1 @@
+web: gunicorn DietitianPalesa.wsgi --log-file - 
