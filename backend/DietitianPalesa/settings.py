@@ -89,7 +89,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'Palesa',
         "USER": "Keletso",
-        "PASSWORD": 'Mercedes24',
+        "PASSWORD": os.environ.get('DB_PASS'),
         "HOST":"dietitian-palesa.cdkupbrmt6ag.eu-west-1.rds.amazonaws.com",
         "PORT":'5432'
     }
@@ -209,8 +209,8 @@ AWS_QUERYSTRING_AUTH = False
 
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-AWS_ACCESS_KEY_ID = 'AKIA5MPDDCJNTMGSXFMT'
-AWS_SECRET_ACCESS_KEY = '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'
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 
 AWS_STORAGE_BUCKET_NAME = 'palesa'
 
