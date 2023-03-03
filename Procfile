@@ -1,1 +1,1 @@
-web: gunicorn DietitianPalesa.wsgi --log-file - 
+web: gunicorn backend.DietitianPalesa.wsgi --log-file - 
